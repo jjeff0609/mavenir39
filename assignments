@@ -1,0 +1,19 @@
+after deleting voting pod =>
+
+-> creates a different pod with different podname.
+
+after deleting worker pod =>
+
+-> creates a different pod with different podname.
+
+after deleting db pod =>
+
+-> lost the connection, when you click cat or dog that data not reflecting in worker pod and always showing 50-50
+
+analysis =>
+
+-> result pod app socket connection towards db has issue. 
+-> if we delete result pod. socket connection will be reestablised and the app will be working.
+
+
+problem with app design => we had socket connection between worker and db.
